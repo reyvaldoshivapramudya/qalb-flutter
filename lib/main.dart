@@ -8,9 +8,13 @@ import 'package:doa_sehari_hari_app/provider/favorite_provider.dart';
 import 'package:doa_sehari_hari_app/provider/page_provider.dart';
 import 'package:doa_sehari_hari_app/static/navigation_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  // Load environment variables from .env file
+  await dotenv.load(fileName: ".env");
   runApp(
     MultiProvider(
       providers: [

@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'package:doa_sehari_hari_app/data/model/doa.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const String _baseUrl = 'https://open-api.my.id';
+  static final String? _baseUrl = dotenv.env['BASE_URL'];
 
   Future<dynamic> getDoaList() async {
     final response = await http.get(Uri.parse('$_baseUrl/api/doa'));
