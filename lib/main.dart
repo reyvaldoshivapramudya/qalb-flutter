@@ -11,9 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Load environment variables from .env file
   await dotenv.load(fileName: ".env");
   runApp(
     MultiProvider(
