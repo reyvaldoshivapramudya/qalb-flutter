@@ -43,7 +43,7 @@ class MainScreen extends StatelessWidget {
             label: 'Doa-doa',
           ),
           NavigationDestination(
-            icon: FaIcon(FontAwesomeIcons.bookmark),
+            icon: FaIcon(FontAwesomeIcons.heart),
             label: 'Favorite',
           ),
         ],
