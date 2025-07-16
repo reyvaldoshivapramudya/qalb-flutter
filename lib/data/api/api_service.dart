@@ -15,8 +15,8 @@ class ApiService {
     }
   }
 
-  Future<Doa> getDoaDetail(int int) async {
-    final response = await http.get(Uri.parse('$_baseUrl/api/doa/$int'));
+  Future<Doa> getDoaDetail(int id) async {
+    final response = await http.get(Uri.parse('$_baseUrl/api/doa/$id'));
     if (response.statusCode == 200) {
       return Doa.fromJson(jsonDecode(response.body));
     } else {
